@@ -1,0 +1,10 @@
+language: scala
+scala:
+- 2.10.4-RC2
+jdk:
+- oraclejdk7
+script:
+- cd framework
+- ./build publishLocal
+- jdk_switcher use oraclejdk8
+- ./runtests --no-publish
